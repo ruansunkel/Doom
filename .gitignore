@@ -1,0 +1,21 @@
+# Local environments, downloaded sources, and generated builds
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.cache/
+build/
+dist/
+artifacts/
+third_party/
+compile_commands.json
+
+# Machine-specific diagnostics and private configuration backups
+*.log
+*.pid
+*.bak
+.env
+.env.*
+!.env.example
+.DS_Store

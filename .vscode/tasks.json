@@ -1,0 +1,169 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Host: Setup development tools",
+      "type": "process",
+      "command": "python3",
+      "args": [
+        "independent/scripts/setup-host-dev.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Host: Check scripts and tests",
+      "type": "process",
+      "command": "bash",
+      "args": [
+        "independent/scripts/check.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Host: Check native prerequisites",
+      "type": "process",
+      "command": "bash",
+      "args": [
+        "independent/scripts/host-doctor.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Host: Check Wine prerequisites",
+      "type": "process",
+      "command": "bash",
+      "args": [
+        "independent/scripts/wine-host-doctor.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Host: Build all",
+      "type": "process",
+      "command": "bash",
+      "args": [
+        "independent/scripts/build-all.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Host: Build MoltenVK",
+      "type": "process",
+      "command": "bash",
+      "args": [
+        "independent/scripts/build-moltenvk.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Host: Build Wine",
+      "type": "process",
+      "command": "bash",
+      "args": [
+        "independent/scripts/build-wine.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Host: Build Steam wrapper",
+      "type": "process",
+      "command": "bash",
+      "args": [
+        "independent/scripts/build-steam-wrapper.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Host: Smoke test runtime",
+      "type": "process",
+      "command": "bash",
+      "args": [
+        "independent/scripts/smoke-wine.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Host: Set up Steam",
+      "type": "process",
+      "command": "bash",
+      "args": [
+        "independent/scripts/doom-runner.sh",
+        "setup"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Host: Launch Steam",
+      "type": "process",
+      "command": "bash",
+      "args": [
+        "independent/scripts/doom-runner.sh",
+        "steam"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Host: Install DOOM",
+      "type": "process",
+      "command": "bash",
+      "args": [
+        "independent/scripts/doom-runner.sh",
+        "install"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Host: Play DOOM",
+      "type": "process",
+      "command": "bash",
+      "args": [
+        "independent/scripts/doom-runner.sh",
+        "play"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

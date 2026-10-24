@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "llvm-vs-code-extensions.vscode-clangd",
+    "ms-python.python",
+    "charliermarsh.ruff",
+    "mads-hartmann.bash-ide-vscode",
+    "timonwong.shellcheck"
+  ]
+}
